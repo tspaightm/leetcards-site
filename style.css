@@ -70,7 +70,7 @@ header {
 }
 
 .logo-img {
-  height: 26px;
+  height: 28px;
   width: auto;
   display: block;
 }
@@ -176,12 +176,48 @@ footer a:hover { color: var(--text-muted); }
   font-size: 15px;
 }
 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+}
+
+/* Landing page: vertically center the hero, pin the footer to the bottom */
+body.landing .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body.landing .hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 0;
+}
+body.landing footer {
+  margin-top: 0;
+}
+
 @media (max-width: 600px) {
   .container { padding: 20px 20px 64px; }
   header { padding: 16px 0 32px; margin-bottom: 32px; }
   h1 { font-size: 26px; }
   .hero h1 { font-size: 32px; }
   .hero-logo { height: 44px; }
-  .logo-img { height: 22px; }
+  .logo-img { height: 24px; }
   nav { gap: 16px; font-size: 13px; }
 }
