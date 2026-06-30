@@ -1,13 +1,15 @@
 :root {
-  --bg: #0B0F1A;
-  --surface: #111827;
-  --border: #1F2937;
-  --text: #E5E7EB;
-  --text-muted: #9CA3AF;
-  --text-soft: #6B7280;
-  --primary: #6366F1;
-  --primary-hover: #818CF8;
-  --purple: #7C3AED;
+  --bg: #0B0E1A;
+  --surface: #161A2C;
+  --surface-hi: #232846;
+  --border: #232846;
+  --text: #E8E9F2;
+  --text-muted: #9CA0B8;
+  --text-soft: #6B7088;
+  --primary: #4F46FF;
+  --primary-hover: #6E66FF;
+  --purple: #7B2FF7;
+  --blue: #1E6BFF;
 }
 
 * { box-sizing: border-box; }
@@ -58,13 +60,19 @@ header {
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--primary), var(--purple));
+  background: linear-gradient(135deg, var(--purple), var(--primary) 45%, var(--blue));
   display: grid;
   place-items: center;
   color: white;
   font-weight: 800;
   font-size: 14px;
   letter-spacing: -0.02em;
+}
+
+.logo-img {
+  height: 26px;
+  width: auto;
+  display: block;
 }
 
 nav {
@@ -140,9 +148,16 @@ footer a:hover { color: var(--text-muted); }
   text-align: center;
   padding: 64px 0 32px;
 }
+.hero-logo {
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto 24px;
+  display: block;
+}
 .hero h1 {
   font-size: 44px;
-  background: linear-gradient(135deg, var(--text), var(--primary));
+  background: linear-gradient(135deg, var(--purple), var(--primary) 45%, var(--blue));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -166,5 +181,7 @@ footer a:hover { color: var(--text-muted); }
   header { padding: 16px 0 32px; margin-bottom: 32px; }
   h1 { font-size: 26px; }
   .hero h1 { font-size: 32px; }
+  .hero-logo { height: 44px; }
+  .logo-img { height: 22px; }
   nav { gap: 16px; font-size: 13px; }
 }
