@@ -171,26 +171,36 @@ footer a:hover { color: var(--text-muted); }
 }
 .hero .links {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 12px;
   justify-content: center;
+  align-items: center;
   font-size: 15px;
 }
 
-.badge {
+/* Official Google Play badge; the PNG includes Google's required clear space */
+.store-badge {
+  display: block;
+  line-height: 0;
+  transition: opacity 0.15s;
+}
+.store-badge:hover { opacity: 0.85; }
+.store-badge img {
+  height: 60px;
+  width: auto;
+}
+
+.coming-soon {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 9px 18px;
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 14px;
+  gap: 8px;
+  color: var(--text-soft);
+  font-size: 13px;
   font-weight: 500;
 }
-.badge-dot {
-  width: 8px;
-  height: 8px;
+.coming-soon-dot {
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--purple), var(--blue));
 }
